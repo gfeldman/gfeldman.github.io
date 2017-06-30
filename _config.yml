@@ -5,7 +5,7 @@ description: "Blog about Scala/Python/R/Whatever Gets The Job Done."
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale: en
-url:
+url: https://gfeldman.github.io
 feed:
   path: atom.xml
 
@@ -36,7 +36,7 @@ owner:
   avatar: bio-photo.jpg # 160x160 px image for author byline
   disqus-shortname:
   github: gfeldman
-  
+
 
 
 include:
