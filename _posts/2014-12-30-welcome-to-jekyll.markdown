@@ -12,13 +12,12 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 GitHub Flavored Markdown is supported.
 
-```ruby
-def print_hi(name)
-  puts "Hi, #{name}"
+
+{% highlight ruby linenos %}
+def foo
+  puts 'foo'
 end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-```
+{% endhighlight %}
 
 ## EasyBook Advanced Functions ##
 
