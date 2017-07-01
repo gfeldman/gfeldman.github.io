@@ -12,4 +12,5 @@ def f(x: Int): Int = {
 	x
 }
 println("hello world")
+val y = s"there are ${n} balloons"
 ```
