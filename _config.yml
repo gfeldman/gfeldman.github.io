@@ -29,7 +29,7 @@ gems:
 paginate: 5
 paginate_path: "page:num"
 
-highlighter: none
+highlighter: rouge
 markdown: kramdown
 kramdown: 
   syntax_highlighter_opts:
