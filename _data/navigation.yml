@@ -1,7 +1,11 @@
+
+
 - title: Blog Posts
   url: /blog/
-  excerpt: ""
-  image: 300x200.gif
+
 
 - title: Personal Site
   url: http://deekay.io  
+
+- title: About Me
+  url: /about/
