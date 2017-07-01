@@ -1,64 +1,37 @@
-# Site wide configuration
+# Site settings
+title: Reacting to Machine Learning 
+url: "https://gfeldman.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+baseurl: "" # the prefix of your site uri, eg. `/jekyll-theme-EasyBook` or just one slash `/`
+#timezone: Asia/Chongqing
+description: >
+  "Notes on building reactive machine learning / data science software."
 
-title: "Reacting to Machine Learning"
-description: "Notes on building reactive machine learning/data science software."
-logo: # 120x120 px default image used for Twitter summary card
-teaser: # 400x250 px default teaser image used in image archive grid
-locale: en
-url: "https://gfeldman.github.io"
-feed:
-  path: atom.xml
+# Your information
+email: gfeldman8@gmail.com
+author: "Guy Feldman"
+avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
+profile: Statistics Ph.D. with an interest in reactive systems.
+twitter_username: gfeldman8
+github_username:  gfeldman
 
-# Jekyll configuration
+# Comment Service (Disqus or 多说)
+#  choose one and un-comment the line to active it
+#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
-sass:
-  sass_dir: _sass
-  style: compressed
-permalink: /:categories/:title/
-kramdown:
-  toc_levels: 1..2
-highlighter: rouge
+permalink: /archivers/:title
 gems:
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
 
+# Build settings
+paginate: 5
+paginate_path: "page:num"
 
-# Site owner
-owner:
-  name: "Guy Feldman"
-  email: "gfeldman8@gmail.com"
-  twitter: "gfeldman8"
-  google:
-    ad-client:
-    ad-slot:
-  bio:
-  avatar: bio-photo.jpg # 160x160 px image for author byline
-  disqus-shortname:
+highlighter: rouge
+markdown: kramdown
 
-
-include:
-  - .htaccess
-exclude:
-  - "*.less"
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - CHANGELOG
-  - Capfile
-  - Gemfile
-  - Gruntfile.js
-  - LICENSE
-  - README
-  - Rakefile
-  - config
-  - gulpfile.js
-  - lib
-  - log
-  - node_modules
-  - package.json
-  - spec
-  - tmp
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

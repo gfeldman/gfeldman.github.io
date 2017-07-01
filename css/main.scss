@@ -1,69 +1,42 @@
 ---
-sitemap: false
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
+@charset "utf-8";
 
-/*
- *
- *  Skinny Bones Jekyll Starter
- *
- *  Designer: Michael Rose
- *  Twitter: http://twitter.com/mmistakes
- *
-*/
+$base-font-family: "Open Sans", "Helvetica Neue", "DejaVu Sans", Arial, "PingFang SC", "Noto Sans CJK SC", "Hiragino Sans GB", "微软雅黑",  Helvetica, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
 
-@import "variables";
+$code-font-family:   Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Liberation Mono", "文泉驿等宽微米黑", "Courier New", Courier, SimSun, monospace;
+$code-font-size:     15px;
 
-/*
-   Vendor
-   ========================================================================== */
+// Width of the content area
+$content-width:    800px;
 
-@import "vendor/bourbon/bourbon";
-@import "grid-settings";
-@import "vendor/neat/neat";
-@import "vendor/font-awesome/font-awesome";
+$on-palm:          600px;
+$on-laptop:        800px;
 
-/*
-   Global
-   ========================================================================== */
+$color-link: #036;
+$color-link-hover: #069;
 
-@import "mixins";
-@import "reset";
-@import "base";
+$header-bg: #607D8B;
+$header-bg-hover: #78909C;
+$header-link: #CFD8DC;
+$header-fg: #FFF;
 
-/*
-   Components
-   ========================================================================== */
-
-@import "helpers";
-@import "buttons";
-@import "badges";
-@import "bullets";
-@import "sliding-menu";
-@import "menu-navicons"; /* animated 3 line menu icon */
-@import "notices";
-@import "animations";
-@import "tiles";
-@import "footnotes";
-@import "toc"; /* table of contents */
-@import "breadcrumbs";
-@import "syntax";
-
-/*
-   Page specific
-   ========================================================================== */
-
-@import "layout";
-
-body{
-    padding-top: 50px;
-    font-family: "Roboto Slab", sans-serif; 
-    font-weight: 300;
-    font-size: 2em;
-    position: relative;
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 100;
-    margin: 0;
-}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "easybook"
+;
