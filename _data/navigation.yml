@@ -1,6 +1,7 @@
-# Site navigation links
+- title: Blog Posts
+  url: /blog/
+  excerpt: ""
+  image: 300x200.gif
 
-- title:
-  url:
-  excerpt:
-  image:
+- title: Personal Site
+  url: http://deekay.io  
