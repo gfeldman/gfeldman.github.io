@@ -89,7 +89,7 @@ td {
 
 
 ## Different Plots ##
-Below is an interactive d3 visualiztion of the data for each of the sub-datasets along with their associated regression line. If you click on one of the points, you will see how the regression line changes when that point is omitted. Clicking anywhere else in the plot will revert to the original configuration. 
+Below is an interactive d3 visualiztion of the data for each of the datasets along with their associated regression line. If you click on one of the points, you will see how the regression line changes when that point is omitted. Clicking anywhere else in the plot will revert to the original configuration. 
 
 
 <div id="example"></div>
