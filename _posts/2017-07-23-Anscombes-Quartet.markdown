@@ -34,7 +34,8 @@ td {
 }
 </style>
 
-Anscombe's quartet consists of four sub-datasets that have very similar summary statistics, but look different visual appearance. For this reason this dataset is considered the "hello world" example in data visualization.
+## "Same" Summary Statisitcs ##
+Anscombe's quartet consists of four datasets that have very similar summary statistics, but look different visual appearance. For this reason this dataset is considered the "hello world" example in data visualization.
 
 <table style="width:100%">
   <tr>
@@ -86,7 +87,7 @@ Anscombe's quartet consists of four sub-datasets that have very similar summary 
 </table>
 
 
-
+## Different Plots ##
 Below is an interactive d3 visualiztion of the data for each of the sub-datasets along with their associated regression line. If you click on one of the points, you will see how the regression line changes when that point is omitted. Clicking anywhere else in the plot will revert to the original configuration. 
 
 
