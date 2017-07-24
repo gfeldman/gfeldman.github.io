@@ -34,8 +34,8 @@ td {
 }
 </style>
 
-## "Same" Summary Statisitcs ##
-[Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet) consists of four datasets that have very similar summary statistics, but different visual appearance. For this reason this dataset is considered the "hello world" example in data visualization.
+## "Same" Summary Statistics ##
+[Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet) consists of four datasets that have very similar summary statistics, but different visual appearance. For this reason, the collection of datasets is considered the "hello world" example in data visualization.
 
 <table style="width:100%">
   <tr>
