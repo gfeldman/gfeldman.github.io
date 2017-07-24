@@ -35,7 +35,7 @@ td {
 </style>
 
 ## "Same" Summary Statisitcs ##
-Anscombe's quartet consists of four datasets that have very similar summary statistics, but look different visual appearance. For this reason this dataset is considered the "hello world" example in data visualization.
+[Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet) consists of four datasets that have very similar summary statistics, but different visual appearance. For this reason this dataset is considered the "hello world" example in data visualization.
 
 <table style="width:100%">
   <tr>
@@ -84,6 +84,7 @@ Anscombe's quartet consists of four datasets that have very similar summary stat
     <td>4.123</td>
     <td>0.817</td>
   </tr>
+  <caption>Summary Statistics for Anscombe's Quartet.</caption>
 </table>
 
 
@@ -267,7 +268,5 @@ function render(error,data){
 
 
 d3.tsv('../data/quartet_with_reg.tsv',render);
-
-
-
 </script>
+
