@@ -34,3 +34,8 @@ markdown: kramdown
 kramdown: 
   syntax_highlighter_opts:
     disable : true
+
+exclude: 
+  - package.json
+  - node_modules
+  - gulpfile.js

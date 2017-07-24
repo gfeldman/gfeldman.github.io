@@ -1,0 +1,25 @@
+{
+  "name": "githubsite",
+  "version": "1.0.0",
+  "description": "Reacting to Machine Learning",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gfeldman/gfeldman.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gfeldman/gfeldman.github.io/issues"
+  },
+  "homepage": "https://github.com/gfeldman/gfeldman.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.3",
+    "lodash": "^4.17.4"
+  }
+}
