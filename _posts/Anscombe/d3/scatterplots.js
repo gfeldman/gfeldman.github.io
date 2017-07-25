@@ -169,4 +169,4 @@ function render(error,data){
 }
 
 
-d3.tsv('../data/quartet_with_reg.tsv',render);
+d3.tsv('../data/Anscombe/quartet_with_reg.tsv',render);
