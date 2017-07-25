@@ -44,7 +44,7 @@ function render(error,data){
 
 
 
-    let svgs = new Map(grps.map(w => [w,d3.select("div#example").append("svg")
+    let svgs = new Map(grps.map(w => [w,d3.select("div#scatterplots").append("svg")
         .attr("width",  '48%')
         .attr("height", height + margin.top + margin.bottom)
         .append("g")

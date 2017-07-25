@@ -6,10 +6,8 @@ categories: d3 statistics visualization dataviz anonymization
 permalink: /blog/AnscombesQuartet
 ---
 
-<script src='../bower_components/d3/d3.min.js'></script>
-
-## "Same" Summary Statistics ##
 [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet) consists of four datasets that have very similar summary statistics, but different visual appearance. For this reason, the collection of datasets is considered the "hello world" example in data visualization. 
+
 
 <style type="text/css">
     td {
@@ -20,11 +18,11 @@ permalink: /blog/AnscombesQuartet
 {% include_relative html/sumstats.html %} 
 
 
-## Different Plots ##
+## Scatter Plots ##
 Below is an interactive d3 visualiztion of the data for each of the datasets along with their associated regression line. If you click on one of the points, you will see how the regression line changes when that point is omitted. Clicking anywhere else in the plot will revert to the original configuration. 
 
-
-<div id="example"></div>
+<script src='../bower_components/d3/d3.min.js'></script>
+<div id="scatterplots"></div>
 
 <style>
 	{% include_relative d3/scatterplots.css %}

@@ -6,8 +6,6 @@ categories: scala akkka reactive
 permalink: /blog/FirstAkka
 ---
 
-## Introduction ##
-
 The purpose of this post is to understand the basics of the actor model in Akka. We will build a basic download manager that uses actors to download files in parallel. 
 I originally wrote this code to download [trip data][nyc-taxi] from the NYC Taxi and Limousine Commission. The trip data is split into monthly csv files for three types of cabs (Yellow, Green, and For-Hire Vehicles). I needed a way to programmatically download the files for all cab types for a year. Wanting to learn Akka, this is what I came up with. 
 
@@ -18,6 +16,8 @@ With that out of the way, let's begin.
 ## The Actors ##
 
 ![Table]
+
+### The Message ###
 
 ### The Checker Actor ### 
 
