@@ -1,0 +1,22 @@
+svg {
+    border:none;
+}
+
+
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+
+}
+.axis .line{
+    stroke: "black";
+}
+.axis .tick line {
+    stroke: #bfbfbf;
+
+}
+
+td {
+	text-align: center;
+}
