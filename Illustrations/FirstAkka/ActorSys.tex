@@ -1,0 +1,139 @@
+\documentclass[tikz]{standalone}
+\usepackage{varwidth}
+\usepackage{tikz}
+\usetikzlibrary{calc,fit,backgrounds}
+
+\newlength\mylen
+\newlength\maxwd
+\newcommand\Text{}
+
+
+\renewcommand\Text{\textbf{Download} \\ \LARGE  (Message)}
+\settowidth\maxwd{\Text}
+\setlength\mylen{\maxwd}
+\multiply\mylen by3
+\ifdim\mylen>5cm
+  \setlength\mylen{4cm}
+\fi
+
+
+\begin{document}
+
+
+\tikzset{
+  comp/.style = {
+    minimum width  = 8cm,
+    minimum height = 4.5cm,
+    text width     = 8cm,
+    inner sep      = 0pt,
+    text           = green,
+    align          = center,
+    font           = \Huge,
+    transform shape,
+    thick
+  },
+  monitor/.style = {draw = none, xscale = 18/16, yscale = 11/9},
+  display/.style = {shading = axis, left color = black!60, right color = black},
+  ut/.style      = {fill = gray}
+}
+\tikzset{
+  computer/.pic = {
+    % screen (with border)
+    \node(-m) [comp, pic actions, monitor]
+      {\phantom{\parbox{\linewidth}{\tikzpictext}}};
+    % display (without border)
+    \node[comp, pic actions, display] {\tikzpictext};
+    \begin{scope}[x = (-m.east), y = (-m.north)]
+      % filling the lower part
+      \path[pic actions, draw = none]
+        ([yshift=2\pgflinewidth]-0.1,-1) -- (-0.1,-1.3) -- (-1,-1.3) --
+        (-1,-2.4) -- (1,-2.4) -- (1,-1.3) -- (0.1,-1.3) --
+        ([yshift=2\pgflinewidth]0.1,-1);
+      % filling the border of the lower part
+      \path[ut]
+        (-1,-2.4) rectangle (1,-1.3)
+        (-0.9,-1.4) -- (-0.7,-2.3) -- (0.7,-2.3) -- (0.9,-1.4) -- cycle;
+      % drawing the frame of the whole computer
+      \path[pic actions, fill = none]
+        (-1,1) -- (-1,-1) -- (-0.1,-1) -- (-0.1,-1.3) -- (-1,-1.3) --
+        (-1,-2.4) coordinate(sw)coordinate[pos=0.5] (-b west) --
+        (1,-2.4) -- (1,-1.3) coordinate[pos=0.5] (-b east) --
+        (0.1,-1.3) -- (0.1,-1) -- (1,-1) -- (1,1) -- cycle;
+      % node around the whole computer
+      \node(-c) [fit = (sw)(-m.north east), inner sep = 0pt] {};
+    \end{scope}
+  }
+}
+
+\newcommand{\envelope}{
+
+\coordinate (A) at (-0.5,0.5);
+\coordinate (B) at (1.41\mylen,-\mylen);
+\draw
+  ([xshift=-0.5\pgflinewidth,yshift=0.5\pgflinewidth]A) --   
+  ([xshift=0.5\pgflinewidth,yshift=0.5\pgflinewidth]A-|B) -- 
+  ([xshift=0.5\pgflinewidth,yshift=-0.5\pgflinewidth]B) -- 
+  ([xshift=-0.5\pgflinewidth,yshift=-0.5\pgflinewidth]B-|A) -- 
+  ([xshift=-0.5\pgflinewidth,yshift=0.5\pgflinewidth]A);
+\draw[fill=yellow!20,line cap=rect]
+  (A) -- (A-|B) -- (B) -- (B-|A) -- (A); 
+\draw 
+  (B-|A) -- (0.705\mylen,-.3\mylen) -- (B);
+\draw[fill=yellow!30,rounded corners=15pt] 
+  (A) -- (0.705\mylen,-0.6\mylen) -- (A-|B);
+\node[anchor=north] 
+  at ($ (A)!0.5!(B|-A) $ ) {\parbox{\mylen}{\centering\Huge\Text}};
+\draw (A) -- (B|-A);}
+
+
+
+
+\definecolor{bgrey}{RGB}{250,250,250}
+\begin{tikzpicture}[line width=4pt,background rectangle/.style={fill=bgrey}, show background rectangle]
+
+
+
+
+ \path[<-] (35,8) edge[bend right=20] node [left] {} (20,2.5);
+ \path[->] (40,2.8) edge[bend left=15] node [left] {} (25.05,0.25);
+  \path[<-] (35,-8) edge[bend left=15] node [left] {} (23.5,-0.25);
+  \path[->] (6.5,-2) edge node [left] {} (14,-2);
+  
+  
+  \pic(client) [
+      draw = gray,
+      fill = gray!30,
+      display/.append style = {left color=gray!30!black!80},
+      scale = 1.1,
+      pic text = {\textbf{Client}}
+    ] at (0,0){computer};
+    
+\pic(supervisor) [
+      draw = blue,
+      fill = blue!30,
+      display/.append style = {left color=blue!30!black!80},
+      scale = 1.1,
+      pic text = {\textbf{Download \\ Supervisor\\ \LARGE (Actor 1)}}
+    ] at (20,-0.5){computer};
+
+\pic(checker) [
+      draw =  red!50!blue,
+      fill =  red!50!blue!30,
+      display/.append style = {left color= red!50!blue!30!black!80},
+      scale = 1.1,
+      pic text = {\textbf{Download \\ Checker \\ \LARGE (Actor 2)}}
+    ] at (40,8){computer};
+    
+\pic(checker) [
+      draw =  orange,
+      fill =  orange!30,
+      display/.append style = {left color= orange!30!black!80},
+      scale = 1.1,
+      pic text = {\textbf{File \\ Downloader \\ \LARGE (Actor 3)}}
+    ] at (40,-8){computer};
+    
+
+\end{tikzpicture}
+
+
+\end{document}

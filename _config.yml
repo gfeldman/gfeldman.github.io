@@ -38,6 +38,7 @@ kramdown:
 include:
   - data
   - bower-components
+  - Illustrations
   
 exclude: 
   - package.json
