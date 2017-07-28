@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "First Steps in Akka"
-date:   2017-07-01 01:30:00
 categories: scala akkka reactive 
 permalink: /blog/FirstAkka
 ---
@@ -21,6 +20,8 @@ figcaption {
 <img src="{{site.url}}/Illustrations/FirstAkka/ActorSys.jpg">
 <figcaption>Figure 1: A rough sketch of the actor system we are building.</figcaption>
 </figure>
+
+
 ## The Actors ##
 
 ### The Checker Actor ### 
