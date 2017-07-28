@@ -19,7 +19,7 @@ permalink: /blog/AnscombesQuartet
 
 
 ## Scatter Plots ##
-Below is an interactive d3 visualiztion of the data for each of the datasets along with their associated regression line. If you click on one of the points, you will see how the regression line changes when that point is omitted. Clicking anywhere else in the plot will revert to the original configuration. 
+Below is an interactive d3 visualiztion of each of the datasets in Anscombe's quartet along with their associated regression line. If you click on one of the points, you will see how the regression line changes when that point is omitted. Clicking anywhere else in the plot will revert to the original configuration. 
 
 <script src='../bower_components/d3/d3.min.js'></script>
 <div id="scatterplots"></div>
